@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/andrewbraunsdorf/restfulapi/issues"
   },
-  "homepage": "https://github.com/andrewbraunsdorf/restfulapi#readme"
+  "homepage": "https://github.com/andrewbraunsdorf/restfulapi#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
