@@ -88,3 +88,38 @@ Installed express-npm install express --save
 --save, saves as a dependency
 Require express const express = require(“express”)
 const app = express();
+
+Version5.0
+Handle requests in express
+Set up routes and create route handlers
+
+app.get("/"); is listening for get requests
+
+Somebody makes a get request it can respond in the function
+app.get("/", function(){
+	
+});
+Still waiting for a response when broswer is spinning...you have to send a response
+Send a request and the server then responds to the client
+
+GET and POST use different URLs
+How we handle a request
+
+Version6.0
+Installed- npm install nodemon --save-dev
+Automatically restarts program when saved
+
+Separate routes into logical components
+Using express route class
+Need express in api file
+Need to enable router by “const router = express.Router();”
+
+Exports routes to use in another file
+Export using “module.exports = router;”
+How do we say to our express apps we want to use these routes 
+We can use a method called use
+Used const routes = require("./routes/api") in index.js then called the function via app.use(routes);
+
+Version6.5
+MongoDB running in background then node.js and express App corresponding to Front-end Mobile App and Other Website
+Need to stimulate requests for Post Put and Delete
