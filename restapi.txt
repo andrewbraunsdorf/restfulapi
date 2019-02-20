@@ -180,3 +180,9 @@ Adds a layer of methods to easily save, edit, delete, retrieve data from mongodb
 Allows us to create our models and schemas easily
 Install mongoose package( as dependency)
  npm install mongoose --save
+
+Required: in a new folder called Models, in a file called ninja.js
+const mongoose = require("monngoose");
+const Schema = mongoose.Schema;
+Added name, rank, available and made the ninja structure.
+
