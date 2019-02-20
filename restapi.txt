@@ -137,3 +137,20 @@ Middleware is handled after request gets sent and before it gets sent out
 If we want to use body parser we use it as the request gets received
 Attached to request object
 
+Installed Body-parser
+npm install body-parser --save
+Saved as dependency
+Need to use above the .use()
+Bodyparser can access multiple data points and we want to use json data
+
+Changed POST request in api.js
+//add a new ninja to the db
+router.post("/ninjas", function(req, res){
+	console.log(req.body);
+	res.send({
+		type: "POST",
+		name: req.body.name,
+		rank: req.body.rank
+	});
+});
+Sent back data received.
