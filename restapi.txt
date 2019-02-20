@@ -154,3 +154,29 @@ router.post("/ninjas", function(req, res){
 	});
 });
 Sent back data received.
+
+Version8.0
+Models
+Models represent collections in MongoDB
+User Model to represent a collection of Users
+Ninja Model to represent a collection of Ninjas
+
+Collection is a table in SQL
+Models work with Schemas
+Schemas
+Schemas define the structure of our data object
+{
+	Name: String,
+	Rank: String,
+	Availability: Boolean
+}
+
+Collections of Ninjas  each have a unique Id
+Each ninja has a schema
+But each one is represented by a name, rank, and availability
+
+Mongoose
+Adds a layer of methods to easily save, edit, delete, retrieve data from mongodb
+Allows us to create our models and schemas easily
+Install mongoose package( as dependency)
+ npm install mongoose --save
