@@ -17,7 +17,7 @@ const NinjaSchema = new Schema ({
 	// add in geolocation
 });
 
-const Ninja = mongoose.model("ninjatte", NinjaSchema);
+const Ninja = mongoose.model("ninja", NinjaSchema);
 
 module.exports = Ninja; 
 
