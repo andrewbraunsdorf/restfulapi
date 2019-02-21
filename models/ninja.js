@@ -1,4 +1,4 @@
-const mongoose = require("monngoose");
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //create ninja Schema & model
