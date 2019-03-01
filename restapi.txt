@@ -186,3 +186,21 @@ const mongoose = require("monngoose");
 const Schema = mongoose.Schema;
 Added name, rank, available and made the ninja structure.
 
+Version9.0
+
+Mongoose provides a method called connect which use to pass connection database we want to connect to.
+Explicitly say mongodb is running and need to connect to it
+Head to index file and require mongoose
+Const mongoose = require(“mongoose”);
+
+Connect to mongodb
+mongoose.connect(“mongodb://localhost/ninjago”) ((this is the type of database we need to connect to))
+
+Ninja.create(req.body); returns a promise, take a second or less then wait for it to be completed then send the response.
+Because its a promise we can tack on .then()
+
+	Ninja.create(req.body).then(function(ninja) {
+		res.send(ninja);
+	});
+Ninja. Create is the method is using the data received from the request.  We are return the ninja we requested.
+
