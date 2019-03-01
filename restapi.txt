@@ -204,3 +204,27 @@ Because its a promise we can tack on .then()
 	});
 Ninja. Create is the method is using the data received from the request.  We are return the ninja we requested.
 
+Version10.0
+Error handling
+In name handler it was require otherwise it just spun
+Missing the name
+We need to handle the error and use middleware to handle that error
+Hey this is an error, this is why its not working
+Tack on a catch error so that  you can look at it
+Add a third parameter called next
+If ninja.create fails whatever is in the catch method will occur. In this case it will be next
+Need middleware for error handling
+Message is property on this error project
+Have to add 422 error
+//error handling middleware
+Added in index.js
+app.use(function(err, req, res, next){
+	// console.log(err);
+	res.status(422).send({error: err.message});
+});
+Added next and catch in api.js
+router.post("/ninjas", function(req, res, next){
+	Ninja.create(req.body).then(function(ninja) {
+		res.send(ninja);
+	}).catch(next);
+});
