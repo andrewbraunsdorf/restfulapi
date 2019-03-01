@@ -228,3 +228,21 @@ router.post("/ninjas", function(req, res, next){
 		res.send(ninja);
 	}).catch(next);
 });
+
+Version11
+Delete requests:
+When you add onto /ninjas/:id you add the id of the ninja
+
+How do you access it?
+Add req.params.id to:
+router.delete("/ninjas/:id", function(req, res, next){
+	console.log(req.params.id);
+	res.send({type: "DELETE"});
+});
+Ninja.findByIdAndRemove(); is a mongoose method
+
+Mongo
+Show dbs
+Use ninjagos
+Show collections
+db.ninjas.find()
